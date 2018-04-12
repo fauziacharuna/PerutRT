@@ -16,22 +16,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -40,8 +24,6 @@ import javafx.stage.Stage;
  */
 public class MenuRegistrasiWargaController implements Initializable {
 
-    @FXML
-    private Label btn_exit;
     @FXML
     private JFXTextField tf_birthDate;
     @FXML
@@ -55,15 +37,21 @@ public class MenuRegistrasiWargaController implements Initializable {
     @FXML
     private JFXComboBox<?> cb_usertType;
     @FXML
-    private TableView<?> table_userName;
+    private JFXTextField tf_saldo;
     @FXML
     private JFXButton btn_save;
+    @FXML
+    private JFXButton btn_reset;
+    @FXML
+    private Label btn_exit;
     @FXML
     private JFXButton btn_edit;
     @FXML
     private JFXButton btn_delete;
     @FXML
     private JFXButton btn_add;
+    @FXML
+    private TableView<?> table_userName;
 
     /**
      * Initializes the controller class.
@@ -73,19 +61,16 @@ public class MenuRegistrasiWargaController implements Initializable {
         // TODO
     }    
 
-    
     @FXML
-    private void handleButtonAction(MouseEvent event) {
-      System.exit(0);
-    }
-    
-    private void tutupBtn(ActionEvent event) {
-        Stage stage = (Stage)btn_exit .getScene().getWindow();
-        stage.close();
+    private void simpanUser(ActionEvent event) {
     }
 
     @FXML
-    private void simpanUser(ActionEvent event) {
+    private void resetAll(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleButtonAction(MouseEvent event) {
     }
 
     @FXML
@@ -97,7 +82,7 @@ public class MenuRegistrasiWargaController implements Initializable {
     }
 
     @FXML
-    private void tambahUser(ActionEvent event) {
+    private void addUser(ActionEvent event) {
     }
     
 }
