@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="305.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Hitung_jumlahController">
+   <children>
+      <Button fx:id="btn_jumlah" layoutX="108.0" layoutY="267.0" mnemonicParsing="false" onAction="#hitungJumlah" text="Jumlah" />
+      <JFXTextField id="tf_bil1" fx:id="tf_bil1" layoutX="70.0" layoutY="126.0" promptText="Bilangan 1" />
+      <JFXTextField id="tf_bil2" fx:id="tf_bil2" layoutX="70.0" layoutY="175.0" promptText="Bilangan 2" />
+      <Label id="lbl_hasil" fx:id="label_hasil" layoutX="70.0" layoutY="227.0" />
+   </children>
+</AnchorPane>

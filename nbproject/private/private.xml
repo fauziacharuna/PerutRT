@@ -5,11 +5,13 @@
         <group>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/PengaturanKeuangan.java</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/Menu.fxml</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/ViewJumlah.java</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/controller/LoginSiputController.java</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/controller/MenuController.java</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/MenuTransaksi.fxml</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/MainClass.java</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/MenuRegistrasiWarga.fxml</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/Hitung_jumlahController.java</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/view/LoginSistemKeuangan.fxml</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuangan/src/controller/MenuRegistrasiWargaController.java</file>
         </group>

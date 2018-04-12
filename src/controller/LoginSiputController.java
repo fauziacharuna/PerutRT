@@ -27,7 +27,7 @@ import javafx.stage.StageStyle;
 /**
  * FXML Controller class
  *
- * @author rheza
+ * @author fauziachmadharuna
  */
 public class LoginSiputController implements Initializable {
     private String username="admin";
