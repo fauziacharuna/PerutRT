@@ -184,9 +184,8 @@
             </Pane>
             <Pane fx:id="pane_dataWarga" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="880.0">
+                  <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: EBF5F1;">
                      <children>
-                        <Pane prefHeight="500.0" prefWidth="58.0" style="-fx-background-color: #39A67F;" />
                         <Label layoutX="88.0" layoutY="35.0" style="-fx-text-fill: #39A67F;" text="Registrasi Warga" textFill="#48a5ea">
                            <font>
                               <Font name="System Bold" size="16.0" />
