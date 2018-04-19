@@ -14,7 +14,7 @@ public class pengeluaran_perubahan {
     private int pengeluaran_Perubahan_id, pengeluaran_id;
     private String pengeluaran_Perubahan_Nama;
     private Double pengeluaran_Perubahan_Nominal;
-    private Date pengeluaran_Perubahan_Tanggal;
+    private String pengeluaran_Perubahan_Tanggal;
 
     public int getPengeluaran_Perubahan_id() {
         return pengeluaran_Perubahan_id;
@@ -48,11 +48,11 @@ public class pengeluaran_perubahan {
         this.pengeluaran_Perubahan_Nominal = pengeluaran_Perubahan_Nominal;
     }
 
-    public Date getPengeluaran_Perubahan_Tanggal() {
+    public String getPengeluaran_Perubahan_Tanggal() {
         return pengeluaran_Perubahan_Tanggal;
     }
 
-    public void setPengeluaran_Perubahan_Tanggal(Date pengeluaran_Perubahan_Tanggal) {
+    public void setPengeluaran_Perubahan_Tanggal(String pengeluaran_Perubahan_Tanggal) {
         this.pengeluaran_Perubahan_Tanggal = pengeluaran_Perubahan_Tanggal;
     }
 }

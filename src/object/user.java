@@ -6,17 +6,6 @@ package object;
  */
 import java.util.Date;
 public class user {
-    private int user_id;
-    private String user_Username;
-    private String user_Password;
-    private String user_Nama_Lengkap;
-    private int user_KTP;
-    private String user_Alamat;
-    private Date user_Tanggal_Lahir;
-    private Enum user_Tipe_User;
-    private Enum user_Gender;
-    private String user_email;
-    private String user_NoHP;
 
     public int getUser_id() {
         return user_id;
@@ -66,27 +55,27 @@ public class user {
         this.user_Alamat = user_Alamat;
     }
 
-    public Date getUser_Tanggal_Lahir() {
+    public String getUser_Tanggal_Lahir() {
         return user_Tanggal_Lahir;
     }
 
-    public void setUser_Tanggal_Lahir(Date user_Tanggal_Lahir) {
+    public void setUser_Tanggal_Lahir(String user_Tanggal_Lahir) {
         this.user_Tanggal_Lahir = user_Tanggal_Lahir;
     }
 
-    public Enum getUser_Tipe_User() {
+    public String getUser_Tipe_User() {
         return user_Tipe_User;
     }
 
-    public void setUser_Tipe_User(Enum user_Tipe_User) {
+    public void setUser_Tipe_User(String user_Tipe_User) {
         this.user_Tipe_User = user_Tipe_User;
     }
 
-    public Enum getUser_Gender() {
+    public String getUser_Gender() {
         return user_Gender;
     }
 
-    public void setUser_Gender(Enum user_Gender) {
+    public void setUser_Gender(String user_Gender) {
         this.user_Gender = user_Gender;
     }
 
@@ -105,5 +94,18 @@ public class user {
     public void setUser_NoHP(String user_NoHP) {
         this.user_NoHP = user_NoHP;
     }
+    private int user_id;
+    private String user_Username;
+    private String user_Password;
+    private String user_Nama_Lengkap;
+    private int user_KTP;
+    private String user_Alamat;
+    private String  user_Tanggal_Lahir;
+    private String user_Tipe_User;
+    private String user_Gender;
+    private String user_email;
+    private String user_NoHP;
+
+   
     
 }   

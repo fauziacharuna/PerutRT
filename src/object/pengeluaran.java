@@ -14,7 +14,7 @@ public class pengeluaran {
     private int pengeluaran_id, pengeluaran_Kategori, pengeluaran_Jenis_id;
     private Double pengeluaran_Nominal;
     private String pengeluaran_Nama;
-    private Date pengeluaran_Tanggal;
+    private String pengeluaran_Tanggal;
 
     public int getPengeluaran_id() {
         return pengeluaran_id;
@@ -56,11 +56,11 @@ public class pengeluaran {
         this.pengeluaran_Nama = pengeluaran_Nama;
     }
 
-    public Date getPengeluaran_Tanggal() {
+    public String getPengeluaran_Tanggal() {
         return pengeluaran_Tanggal;
     }
 
-    public void setPengeluaran_Tanggal(Date pengeluaran_Tanggal) {
+    public void setPengeluaran_Tanggal(String pengeluaran_Tanggal) {
         this.pengeluaran_Tanggal = pengeluaran_Tanggal;
     }
 }

@@ -14,7 +14,7 @@ public class iuran_perubahan {
     private int iuran_Perubahan_id, iuran_id;
     private Double iuran_Perubahan_Nominal;
     private String iuran_Peruahan_Nama;
-    private Date iuran_Perubahan_Tanggal;
+    private String iuran_Perubahan_Tanggal;
 
     public int getIuran_Perubahan_id() {
         return iuran_Perubahan_id;
@@ -48,11 +48,11 @@ public class iuran_perubahan {
         this.iuran_Peruahan_Nama = iuran_Peruahan_Nama;
     }
 
-    public Date getIuran_Perubahan_Tanggal() {
+    public String getIuran_Perubahan_Tanggal() {
         return iuran_Perubahan_Tanggal;
     }
 
-    public void setIuran_Perubahan_Tanggal(Date iuran_Perubahan_Tanggal) {
+    public void setIuran_Perubahan_Tanggal(String iuran_Perubahan_Tanggal) {
         this.iuran_Perubahan_Tanggal = iuran_Perubahan_Tanggal;
     }
 }

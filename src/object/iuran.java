@@ -13,7 +13,7 @@ import java.util.Date;
 public class iuran {
     private int iuran_id, iuran_Kategori_id, iuran_Jenis_id;
     private Double iuran_Nominal, iuran_Total;
-    private Date iuran_Tanggal;
+    private String iuran_Tanggal;
     private String iuran_Nama;
 
     public int getIuran_id() {
@@ -56,11 +56,11 @@ public class iuran {
         this.iuran_Total = iuran_Total;
     }
 
-    public Date getIuran_Tanggal() {
+    public String getIuran_Tanggal() {
         return iuran_Tanggal;
     }
 
-    public void setIuran_Tanggal(Date iuran_Tanggal) {
+    public void setIuran_Tanggal(String iuran_Tanggal) {
         this.iuran_Tanggal = iuran_Tanggal;
     }
 

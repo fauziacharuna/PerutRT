@@ -8,8 +8,8 @@ import java.util.Date;
 public class transaksi {
     private int transaksi_id, pengeluaran_id, iuran_id, user_id;
     private Double transaksi_Saldo, transaksi_Nominal;
-    private Date transaksi_Tanggal;
-    private Enum transaksi_tipe;
+    private String transaksi_Tanggal;
+    private String transaksi_tipe;
     private String transaksi_Nama, user_Username;
 
     public int getTransaksi_id() {
@@ -60,19 +60,19 @@ public class transaksi {
         this.transaksi_Nominal = transaksi_Nominal;
     }
 
-    public Date getTransaksi_Tanggal() {
+    public String getTransaksi_Tanggal() {
         return transaksi_Tanggal;
     }
 
-    public void setTransaksi_Tanggal(Date transaksi_Tanggal) {
+    public void setTransaksi_Tanggal(String transaksi_Tanggal) {
         this.transaksi_Tanggal = transaksi_Tanggal;
     }
 
-    public Enum getTransaksi_tipe() {
+    public String getTransaksi_tipe() {
         return transaksi_tipe;
     }
 
-    public void setTransaksi_tipe(Enum transaksi_tipe) {
+    public void setTransaksi_tipe(String transaksi_tipe) {
         this.transaksi_tipe = transaksi_tipe;
     }
 
