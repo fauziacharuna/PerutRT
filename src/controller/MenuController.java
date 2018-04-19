@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 /**
@@ -79,6 +80,22 @@ public class MenuController implements Initializable {
     private JFXButton btn_add;
     @FXML
     private TableView<?> table_userName;
+    @FXML
+    private AnchorPane anchorPane_Pemasukan;
+    @FXML
+    private JFXButton btn_pengeluaran1;
+    @FXML
+    private JFXButton btn_pemasukan1;
+    @FXML
+    private AnchorPane anchorPane_pengeluaran;
+    @FXML
+    private JFXComboBox<?> cb_pilhPengeluaran;
+    @FXML
+    private JFXTextField tf_nominal_pengeluaran;
+    @FXML
+    private JFXButton btn_pemasukan;
+    @FXML
+    private JFXButton btn_pengeluaran;
 
     /**
      * Initializes the controller class.
@@ -139,6 +156,18 @@ public class MenuController implements Initializable {
 
     @FXML
     private void addUser(ActionEvent event) {
+    }
+
+    @FXML
+    private void call_pengeluaran(ActionEvent event) {
+        anchorPane_pengeluaran.setVisible(true);
+        anchorPane_Pemasukan.setVisible(false);
+    }
+
+    @FXML
+    private void call_pemasukan(ActionEvent event) {
+        anchorPane_pengeluaran.setVisible(false);
+        anchorPane_Pemasukan.setVisible(true);
     }
     
 }
