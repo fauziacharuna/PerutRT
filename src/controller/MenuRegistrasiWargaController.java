@@ -35,7 +35,7 @@ public class MenuRegistrasiWargaController implements Initializable {
     @FXML
     private JFXTextField tf_name;
     @FXML
-    private JFXComboBox<?> cb_usertType;
+    private JFXComboBox<String> cb_usertType;
     @FXML
     private JFXTextField tf_saldo;
     @FXML
@@ -59,6 +59,9 @@ public class MenuRegistrasiWargaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        cb_usertType.getItems().add("admin");
+        cb_usertType.getItems().add("operator");
+        cb_usertType.getItems().add("warga");
     }    
 
     @FXML

@@ -12,12 +12,18 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -115,8 +121,20 @@ public class MenuController implements Initializable {
     @FXML
     private void regisWarga(ActionEvent event) {
         pane_home.setVisible(false);
-        pane_dataWarga.setVisible(true);
+//        pane_dataWarga.setVisible(true);
         pane_transaksi.setVisible(false);
+         try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/MenuRegistrasiWarga.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setScene(new Scene(root1));  
+            stage.show();
+          }catch(Exception ex){
+              ex.printStackTrace();
+              System.out.println("Error");
+          }
        
     }
 
