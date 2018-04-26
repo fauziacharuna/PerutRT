@@ -106,4 +106,7 @@ public class user {
         this.user_NoHP = user_NoHP;
     }
     
+
+   
+    
 }   
