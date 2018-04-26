@@ -38,11 +38,13 @@
       <Label fx:id="statustext" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="340.0" layoutY="316.0" prefHeight="17.0" prefWidth="180.0" textFill="#1e1b1b" />
       <AnchorPane layoutY="-5.0" prefHeight="409.0" prefWidth="292.0" style="-fx-background-color: #39A67F;">
          <children>
-            <ImageView fitHeight="199.0" fitWidth="210.0" layoutX="47.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../resources/img/logo.png" />
-               </image>
-            </ImageView>
+            <Label layoutX="47.0" layoutY="251.0" lineSpacing="100.0" prefHeight="47.0" prefWidth="180.0" text="FINANCEIN" textFill="WHITE">
+               <font>
+                  <Font name="AlexanderGrotesk-Bold" size="34.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="298.0" prefHeight="17.0" prefWidth="190.0" text="Sistem Pengelelolaan Keuangan RT" textAlignment="CENTER" textFill="#f8f8f8" />
+            <Label fx:id="versi" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="387.0" prefHeight="17.0" prefWidth="43.0" text="Beta 1.0" textAlignment="CENTER" textFill="#f8f8f8" />
          </children>
       </AnchorPane>
    </children>
