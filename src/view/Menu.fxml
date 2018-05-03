@@ -12,285 +12,45 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
    <children>
-      <Pane layoutY="-6.0" prefHeight="161.0" prefWidth="1129.0" style="-fx-background-color: #39A67F;">
+      <Pane layoutX="-4.0" layoutY="-6.0" prefHeight="98.0" prefWidth="1136.0" style="-fx-background-color: #39A67F;">
          <children>
-            <JFXTextField fx:id="tf_search" focusColor="WHITE" layoutX="850.0" layoutY="68.0" prefHeight="25.0" prefWidth="225.0" promptText="Search" unFocusColor="#f8f0f0" />
-            <ImageView fitHeight="48.0" fitWidth="38.0" layoutX="16.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="48.0" fitWidth="38.0" layoutX="344.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../resources/img/home1.png" />
                </image>
             </ImageView>
-            <Label layoutX="59.0" layoutY="34.0" text="Pengaturan Keuangan RT" textFill="WHITE">
+            <Label layoutX="409.0" layoutY="28.0" text="Pengaturan Keuangan RT" textFill="WHITE">
                <font>
                   <Font size="26.0" />
                </font>
             </Label>
-            <ImageView fitHeight="25.0" fitWidth="45.0" layoutX="23.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../resources/img/user.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="60.0" layoutY="113.0" text="Fauzi Achmad Haruna " textFill="WHITE">
-               <font>
-                  <Font name="Segoe UI" size="9.0" />
-               </font>
-            </Label>
-            <Label layoutX="60.0" layoutY="130.0" text="Admin" textFill="WHITE">
-               <font>
-                  <Font name="Segoe UI" size="7.0" />
-               </font>
-            </Label>
-            <Label id="txt_close" fx:id="label" layoutX="1079.0" layoutY="23.0" onMousePressed="#handleButtonAction" prefHeight="22.0" prefWidth="36.0" text="X" textAlignment="RIGHT" textFill="WHITE">
+            <Label id="txt_close" fx:id="lbl_exit" layoutX="1093.0" layoutY="-2.0" prefHeight="22.0" prefWidth="36.0" text="X" textAlignment="RIGHT" textFill="#f9fcff">
                <font>
                   <Font name="Segoe UI Bold" size="17.0" />
                </font>
             </Label>
+            <Pane fx:id="Admin" layoutX="947.0" layoutY="50.0" prefHeight="33.0" prefWidth="160.0">
+               <children>
+                  <MenuButton fx:id="menuButton_user" layoutX="50.0" layoutY="3.0" mnemonicParsing="false" style="-fx-background-color: #39A67F;" textFill="#ebe3e3">
+                    <items>
+                      <MenuItem fx:id="item_admin" mnemonicParsing="false" text="Admin" />
+                      <MenuItem fx:id="item_operator" mnemonicParsing="false" onAction="#operatorItem" text="operator" />
+                    </items>
+                  </MenuButton>
+                  <ImageView fx:id="avatar_user" disable="true" fitHeight="25.0" fitWidth="45.0" layoutX="13.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/img/user_admin.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
          </children>
       </Pane>
-      <StackPane layoutX="242.0" layoutY="186.0" prefHeight="500.0" prefWidth="880.0">
+      <Pane fx:id="pane_navigation" layoutY="92.0" prefHeight="591.0" prefWidth="164.0" style="-fx-background-color: EBF5F1;">
          <children>
-            <Pane fx:id="pane_home" prefHeight="480.0" prefWidth="880.0">
-               <children>
-                  <Pane prefHeight="498.0" prefWidth="117.0" />
-                  <AnchorPane layoutY="20.0" prefHeight="234.0" prefWidth="239.0" style="-fx-background-color: ffffff;">
-                     <children>
-                        <Label layoutX="28.0" layoutY="22.0" text="Iuran Aktif" textFill="#39a67f" textOverrun="CLIP">
-                           <font>
-                              <Font name="Segoe UI Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="32.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../resources/img/more.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="32.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../resources/img/more.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="32.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../resources/img/more2.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="57.0" layoutY="99.0" text="Iuran Idul Adha" textFill="#9a9898">
-                           <font>
-                              <Font name="Segoe UI" size="11.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="58.0" layoutY="120.0" text="Iuran Sampah" textFill="#9a9898">
-                           <font>
-                              <Font name="Segoe UI" size="11.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="58.0" layoutY="145.0" text="Iuran Bersih-bersih" textFill="#9a9898">
-                           <font>
-                              <Font name="Segoe UI" size="11.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="29.0" layoutY="58.0" text="Bulan">
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Label>
-                        <JFXComboBox fx:id="combobox_bulan" focusColor="#cfd0cc" labelFloat="true" layoutX="63.0" layoutY="56.0" opacity="0.18" prefHeight="9.0" prefWidth="96.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="250.0" layoutY="20.0" prefHeight="234.0" prefWidth="592.0" style="-fx-background-color: ffffff;">
-                     <children>
-                        <AreaChart layoutX="59.0" layoutY="28.0" prefHeight="194.0" prefWidth="437.0">
-                          <xAxis>
-                            <CategoryAxis side="BOTTOM" />
-                          </xAxis>
-                          <yAxis>
-                            <NumberAxis side="LEFT" />
-                          </yAxis>
-                        </AreaChart>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutY="280.0" prefHeight="190.0" prefWidth="849.0" style="-fx-background-color: ffffff;">
-                     <children>
-                        <Label layoutX="28.0" layoutY="22.0" text="Laporan Keuangan" textFill="#39a67f">
-                           <font>
-                              <Font name="Segoe UI Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <TableView layoutX="27.0" layoutY="53.0" prefHeight="127.0" prefWidth="746.0" style="-fx-background-color: #fff;">
-                           <columns>
-                              <TableColumn id="table_pemasukan" prefWidth="228.8884735107422" text="Pemasukan" />
-                              <TableColumn id="table_pengeluaran" prefWidth="267.1114807128906" text="Pengeluaran" />
-                              <TableColumn id="table_saldo" prefWidth="212.71722412109375" text="Saldo RT" />
-                           </columns>
-                           <columnResizePolicy>
-                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                           </columnResizePolicy>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </Pane>
-            <Pane fx:id="pane_transaksi" prefHeight="449.0" prefWidth="880.0" style="-fx-background-color: #EBF5F1;">
-               <children>
-                  <AnchorPane id="AnchorPane" fx:id="anchorPane_Pemasukan" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: ffffff;">
-                     <children>
-                        <Label layoutX="133.0" layoutY="31.0" style="-fx-text-fill: #39A67F;" text="Transaksi Pemasukan" textFill="#48a5ea">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <JFXButton buttonType="RAISED" layoutX="575.0" layoutY="420.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Save" textFill="WHITE" />
-                        <Separator layoutX="133.0" layoutY="54.0" prefHeight="2.0" prefWidth="690.0" />
-                        <JFXButton buttonType="RAISED" layoutX="480.0" layoutY="419.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Delete" textFill="WHITE" />
-                        <Pane layoutX="123.0" layoutY="138.0" prefHeight="240.0" prefWidth="262.0">
-                           <children>
-                              <VBox layoutY="-3.0" prefHeight="240.0" prefWidth="262.0" spacing="25.0">
-                                 <children>
-                                    <JFXComboBox focusColor="#39a67f" labelFloat="true" prefHeight="27.0" prefWidth="262.0" promptText="Pilih Iuran" />
-                                    <JFXTextField fx:id="tf_nominalIuran" editable="false" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="216.0" promptText="Nominal" />
-                                    <JFXTextField fx:id="tf_jumlahKurang" labelFloat="true" prefHeight="25.0" prefWidth="191.0" promptText="Jumlah Kurang" />
-                                    <JFXTextField fx:id="tf_status" labelFloat="true" prefHeight="25.0" prefWidth="191.0" promptText="Status" />
-                                 </children>
-                                 <padding>
-                                    <Insets top="15.0" />
-                                 </padding>
-                              </VBox>
-                           </children>
-                        </Pane>
-                        <Pane layoutX="399.0" layoutY="51.0" prefHeight="82.0" prefWidth="420.0">
-                           <children>
-                              <Text layoutX="186.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rp. 100.000" />
-                              <JFXComboBox focusColor="#39a67f" labelFloat="true" layoutX="8.0" layoutY="5.0" prefHeight="27.0" prefWidth="269.0" promptText="Nama Anggota" />
-                              <Text fontSmoothingType="LCD" layoutX="12.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit" />
-                           </children>
-                        </Pane>
-                        <Pane layoutX="399.0" layoutY="124.0" prefHeight="251.0" prefWidth="420.0">
-                           <children>
-                              <TableView layoutX="-1.0" layoutY="14.0" prefHeight="240.0" prefWidth="423.0">
-                                 <columns>
-                                    <TableColumn prefWidth="82.71786499023438" text="ID " />
-                                    <TableColumn prefWidth="180.91619873046875" text="Jenis Iuran" />
-                                    <TableColumn prefWidth="158.0" text="Besar Iuran" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </Pane>
-                        <JFXButton buttonType="RAISED" layoutX="677.0" layoutY="418.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Edit" textFill="WHITE" />
-                        <JFXButton fx:id="btn_pengeluaran1" layoutX="27.0" layoutY="414.0" onAction="#call_pengeluaran" text="Pengeluaran" />
-                        <JFXButton fx:id="btn_pemasukan1" layoutX="29.0" layoutY="87.0" onAction="#call_pemasukan" text="Pemasukan" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane id="AnchorPane" fx:id="anchorPane_pengeluaran" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: ffffff;" visible="false">
-                     <children>
-                        <Label layoutX="133.0" layoutY="31.0" style="-fx-text-fill: #39A67F;" text="Transaksi Pengeluaran" textFill="#48a5ea">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <JFXButton buttonType="RAISED" layoutX="575.0" layoutY="420.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Save" textFill="WHITE" />
-                        <Separator layoutX="133.0" layoutY="54.0" prefHeight="2.0" prefWidth="690.0" />
-                        <JFXButton buttonType="RAISED" layoutX="480.0" layoutY="419.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Delete" textFill="WHITE" />
-                        <Pane layoutX="123.0" layoutY="138.0" prefHeight="240.0" prefWidth="262.0">
-                           <children>
-                              <VBox layoutY="-3.0" prefHeight="240.0" prefWidth="262.0" spacing="25.0">
-                                 <children>
-                                    <JFXComboBox fx:id="cb_pilhPengeluaran" focusColor="#39a67f" labelFloat="true" prefHeight="27.0" prefWidth="262.0" promptText="Pilih Pengeluaran" />
-                                    <JFXTextField fx:id="tf_nominal_pengeluaran" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="216.0" promptText="Nominal" />
-                                 </children>
-                                 <padding>
-                                    <Insets top="15.0" />
-                                 </padding>
-                              </VBox>
-                           </children>
-                        </Pane>
-                        <Pane layoutX="399.0" layoutY="51.0" prefHeight="82.0" prefWidth="420.0">
-                           <children>
-                              <Text layoutX="186.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rp. 100.000" />
-                              <Text fontSmoothingType="LCD" layoutX="12.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo RT" />
-                           </children>
-                        </Pane>
-                        <Pane layoutX="399.0" layoutY="124.0" prefHeight="251.0" prefWidth="420.0">
-                           <children>
-                              <TableView layoutX="-1.0" layoutY="14.0" prefHeight="240.0" prefWidth="423.0">
-                                 <columns>
-                                    <TableColumn prefWidth="82.71786499023438" text="ID " />
-                                    <TableColumn prefWidth="180.91619873046875" text="Jenis Pengeluaran" />
-                                    <TableColumn prefWidth="158.0" text="Besar Pengeluaran" />
-                                 </columns>
-                              </TableView>
-                           </children>
-                        </Pane>
-                        <JFXButton buttonType="RAISED" layoutX="677.0" layoutY="418.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Edit" textFill="WHITE" />
-                        <JFXButton fx:id="btn_pemasukan" layoutX="30.0" layoutY="79.0" onAction="#call_pemasukan" text="Pemasukan" />
-                        <JFXButton fx:id="btn_pengeluaran" layoutX="28.0" layoutY="417.0" onAction="#call_pengeluaran" text="Pengeluaran" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </Pane>
-            <Pane fx:id="pane_dataWarga" prefHeight="200.0" prefWidth="200.0" visible="false">
-               <children>
-                  <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="880.0" style="-fx-background-color: ffffff;">
-                     <children>
-                        <Label layoutX="88.0" layoutY="35.0" style="-fx-text-fill: #39A67F;" text="Registrasi Warga" textFill="#48a5ea">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Label>
-                        <Separator layoutX="88.0" layoutY="59.0" prefHeight="12.0" prefWidth="779.0" />
-                        <Pane layoutX="92.0" layoutY="73.0" prefHeight="354.0" prefWidth="226.0">
-                           <children>
-                              <VBox prefHeight="331.0" prefWidth="226.0" spacing="25.0">
-                                 <children>
-                                    <JFXTextField fx:id="tf_birthDate" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Date Of Birth" />
-                                    <JFXTextField fx:id="tf_username" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="User Name" />
-                                    <JFXTextField fx:id="tf_address" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Address" />
-                                    <JFXTextField fx:id="tf_identity" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Identity Number" />
-                                    <JFXTextField fx:id="tf_name" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Name" />
-                                    <JFXComboBox fx:id="cb_usertType" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="User Type" />
-                                    <JFXTextField fx:id="tf_saldo" promptText="Saldo" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="15.0" top="15.0" />
-                                 </padding>
-                              </VBox>
-                           </children>
-                        </Pane>
-                        <JFXButton fx:id="btn_save" layoutX="358.0" layoutY="449.0" onAction="#simpanUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Save" textFill="WHITE" />
-                        <JFXButton fx:id="btn_reset" layoutX="363.0" layoutY="371.0" onAction="#resetAll" prefHeight="25.0" prefWidth="94.0" ripplerFill="#a82f2f" text="Reset All" />
-                        <JFXButton fx:id="btn_edit" layoutX="227.0" layoutY="449.0" onAction="#editUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Edit" textFill="WHITE" />
-                        <JFXButton fx:id="btn_delete" layoutX="91.0" layoutY="449.0" onAction="#hapusUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Delete" textFill="WHITE" />
-                        <ScrollPane layoutX="350.0" layoutY="109.0" prefHeight="200.0" prefWidth="185.0">
-                           <content>
-                              <VBox prefHeight="200.0" prefWidth="186.0" spacing="10.0">
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Iuran" VBox.vgrow="ALWAYS" />
-                                    <CheckBox mnemonicParsing="false" text="Iuran Wajib" />
-                                    <CheckBox mnemonicParsing="false" text="Iuran Insidental" />
-                                    <CheckBox mnemonicParsing="false" text="Iuran Sampah" />
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" top="10.0" />
-                                 </padding>
-                              </VBox>
-                           </content>
-                        </ScrollPane>
-                        <JFXButton fx:id="btn_add" buttonType="RAISED" layoutX="470.0" layoutY="450.0" onAction="#addUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Add" textFill="WHITE" />
-                        <TableView fx:id="table_userName" layoutX="591.0" layoutY="87.0" prefHeight="340.0" prefWidth="226.0">
-                           <columns>
-                              <TableColumn prefWidth="225.0" text="User Name" />
-                           </columns>
-                        </TableView>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </Pane>
-         </children>
-      </StackPane>
-      <Pane layoutX="3.0" layoutY="156.0" prefHeight="527.0" prefWidth="236.0" style="-fx-background-color: EBF5F1;">
-         <children>
-            <VBox layoutY="46.0" prefHeight="418.0" prefWidth="241.0" spacing="20.0">
+            <VBox layoutY="37.0" prefHeight="510.0" prefWidth="161.0" spacing="20.0">
                <children>
                   <JFXButton id="btn_transaksi" fx:id="btn_beranda" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#beranda" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Beranda" textFill="#39a67f">
                      <font>
@@ -299,19 +59,31 @@
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/img/homebtn.png" />
+                              <Image url="@../resources/img/homepage.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton id="btn_transaksi" fx:id="btn_transaksi" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#transaksi" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Transaksi" textFill="#39a67f">
+                  <JFXButton id="btn_transaksi" fx:id="btn_pemasukan" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#transaksiPemasukan" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Pemasukan" textFill="#39a67f">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/img/money.png" />
+                              <Image url="@../resources/img/Pemasukan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton id="btn_transaksi" fx:id="btn_pengeluaran" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#transaksiPengeluaran" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Pengeluaran" textFill="#39a67f">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/Pengeluaran.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -323,31 +95,43 @@
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/img/team.png" />
+                              <Image url="@../resources/img/user.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton id="btn_transaksi" fx:id="btn_laporan" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#laporan" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Laporan" textFill="#39a67f" VBox.vgrow="ALWAYS">
+                  <JFXButton id="btn_transaksi" fx:id="btn_laporan" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#buatLaporan" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Laporan" textFill="#39a67f" VBox.vgrow="ALWAYS">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/img/report.png" />
+                              <Image url="@../resources/img/money_report.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton id="btn_transaksi" fx:id="btn_beranda1" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#beranda" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Pengaturan Iuran" textFill="#39a67f">
+                  <JFXButton id="btn_transaksi" fx:id="btn_pengaturan_iuran" contentDisplay="TOP" graphicTextGap="5.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#mengatur_iuran" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Pengaturan Iuran" textFill="#39a67f">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/img/iuran.png" />
+                              <Image url="@../resources/img/Edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton id="btn_transaksi" fx:id="btn_website" contentDisplay="TOP" graphicTextGap="5.0" layoutX="10.0" layoutY="379.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#open_website" prefHeight="37.0" prefWidth="241.0" ripplerFill="#15d755" text="Website" textFill="#39a67f">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/img/website.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -359,5 +143,6 @@
             </VBox>
          </children>
       </Pane>
+      <StackPane fx:id="sp_pane_holder" layoutX="162.0" layoutY="90.0" prefHeight="594.0" prefWidth="969.0" />
    </children>
 </AnchorPane>

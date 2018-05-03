@@ -3,18 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/dao.mysql/DAOMySqlIuranJenis.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/LoginSiputController.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/dao.mysql/DAOMySqlDeposit.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/dao.mysql/DAOMySqlIuran.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/dao.mysql/DAOMySqlPengeluaranKategori.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/dao.mysql/DAOMySqlIuranPerubahan.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/LoginSistemKeuangan.fxml</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/BerandaController.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/TransaksiPemasukan.fxml</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/MainClass.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/dao/DAOMySqlIuranKategori.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/CetakLaporanController.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/Beranda.fxml</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/LoginPerutController.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/TransaksiPengeluaran.fxml</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/MenuTransaksiPemasukanController.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/Menu.fxml</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/RegistrasiWargaController.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/MenuTransaksiPengeluaranController.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/RegistrasiWarga.fxml</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/MenuController.java</file>
             <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/MenuRegistrasiWargaController.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/PengaturanKeuangan.java</file>
-            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/dao.mysql/DAOMySqlUser.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/controller/CetakController.java</file>
+            <file>file:/Users/fauziachmadharuna/NetBeansProjects/PengaturanKeuanganRT/src/view/CetakLaporan.fxml</file>
         </group>
     </open-files>
 </project-private>
