@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="RegistrasiWarga" prefHeight="684.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrasiWargaController">
+   <children>
+      <StackPane layoutX="2.0" layoutY="5.0" prefHeight="606.0" prefWidth="1050.0">
+         <children>
+            <Pane fx:id="pane_dataWarga" prefHeight="598.0" prefWidth="1027.0">
+               <children>
+                  <AnchorPane id="AnchorPane" layoutX="1.0" layoutY="-1.0" prefHeight="604.0" prefWidth="917.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="88.0" layoutY="15.0" style="-fx-text-fill: #39A67F;" text="Registrasi Warga" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="88.0" layoutY="39.0" prefHeight="12.0" prefWidth="779.0" />
+                        <Pane layoutX="598.0" layoutY="54.0" prefHeight="354.0" prefWidth="274.0">
+                           <children>
+                              <VBox prefHeight="357.0" prefWidth="274.0" spacing="25.0">
+                                 <children>
+                                    <JFXTextField fx:id="tf_name" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Nama" />
+                                    <JFXTextField fx:id="tf_birthDate" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Tanggal Lahir" />
+                                    <JFXTextField fx:id="tf_username" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Username" />
+                                    <JFXTextField fx:id="tf_address" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Alamat" />
+                                    <JFXTextField fx:id="tf_identity" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="No KTP" />
+                                    <JFXComboBox fx:id="cb_usertType" focusColor="#39a67f" labelFloat="true" prefHeight="27.0" prefWidth="274.0" promptText="Tipe User" />
+                                    <JFXTextField fx:id="tf_saldo" focusColor="#39a67f" promptText="Saldo" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <JFXButton fx:id="btn_save" layoutX="613.0" layoutY="448.0" onAction="#simpanUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Save" textFill="WHITE" />
+                        <JFXButton fx:id="btn_reset" layoutX="714.0" layoutY="511.0" onAction="#resetAll" prefHeight="25.0" prefWidth="94.0" ripplerFill="#ee1111" style="-fx-background-color: c62828;" text="Reset All" textFill="#f5f2f2" />
+                        <JFXButton fx:id="btn_edit" layoutX="227.0" layoutY="449.0" onAction="#editUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Edit" textFill="WHITE" />
+                        <JFXButton fx:id="btn_delete" layoutX="95.0" layoutY="449.0" onAction="#hapusUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Delete" textFill="WHITE" />
+                        <ScrollPane layoutX="347.0" layoutY="59.0" prefHeight="200.0" prefWidth="185.0">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="186.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Iuran" VBox.vgrow="ALWAYS" />
+                                    <CheckBox mnemonicParsing="false" text="Iuran Wajib" />
+                                    <CheckBox mnemonicParsing="false" text="Iuran Insidental" />
+                                    <CheckBox mnemonicParsing="false" text="Iuran Sampah" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <JFXButton fx:id="btn_add" buttonType="RAISED" layoutX="794.0" layoutY="447.0" onAction="#addUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Add" textFill="WHITE" />
+                        <TableView fx:id="table_userName" layoutX="87.0" layoutY="57.0" prefHeight="340.0" prefWidth="226.0">
+                           <columns>
+                              <TableColumn prefWidth="225.0" text="User Name" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

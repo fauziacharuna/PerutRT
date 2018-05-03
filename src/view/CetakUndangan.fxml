@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CetakUndanganController">
+   <children>
+      <StackPane layoutX="51.0" layoutY="22.0" prefHeight="366.0" prefWidth="557.0">
+         <children>
+            <Pane prefHeight="309.0" prefWidth="415.0">
+               <children>
+                  <VBox layoutX="-2.0" layoutY="-3.0" prefHeight="327.0" prefWidth="510.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Isikan Keterangan Untuk Undangan" textOrigin="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <HBox prefHeight="236.0" prefWidth="234.0">
+                           <children>
+                              <VBox prefHeight="180.0" prefWidth="189.0" spacing="30.0">
+                                 <children>
+                                    <JFXTextField focusColor="#39a67f" promptText="Perihal Undangan" />
+                                    <JFXTextField focusColor="#39a67f" labelFloat="true" promptText="Lampiran" />
+                                    <DatePicker promptText="Tangal Pelaksanaan" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="btn_ctkUndangan" buttonType="RAISED" contentDisplay="CENTER" onAction="#cetakUndanganPDF" ripplerFill="#25d394" style="-fx-border-radius: 5cm; -fx-background-radius: 5cm; -fx-background-color: #39A67F;" text="Cetak Undangan" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="200.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <HBox layoutX="268.0" layoutY="40.0" prefHeight="236.0" prefWidth="234.0">
+                     <children>
+                        <VBox prefHeight="206.0" prefWidth="189.0" spacing="30.0">
+                           <children>
+                              <JFXTextField focusColor="#39a67f" promptText="Waktu" />
+                              <JFXTextField focusColor="#39a67f" labelFloat="true" promptText="Tempat" />
+                              <JFXTextField focusColor="#39a67f" labelFloat="true" promptText="Acara" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

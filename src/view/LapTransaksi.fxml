@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="acPane_LapTransaksi" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LapTransaksiController">
+   <children>
+      <TableView fx:id="tv_TableLaporan" layoutX="35.0" layoutY="33.0" prefHeight="200.0" prefWidth="606.0">
+        <columns>
+          <TableColumn fx:id="tColumn_tgl" prefWidth="75.0" text="Tanggal" />
+          <TableColumn fx:id="tColumn_NamaTransaksi" prefWidth="124.0" text="Nama Transaksi" />
+            <TableColumn fx:id="tColumn_NominalTransaksi" prefWidth="125.0" text="Nominal Transaksi" />
+            <TableColumn fx:id="tColumn_TipeTransaksi" prefWidth="130.0" text="Tipe Transaksi" />
+            <TableColumn fx:id="tColumn_NamaUser" prefWidth="151.0" text="Nama User" />
+        </columns>
+      </TableView>
+      <HBox layoutX="35.0" layoutY="245.0" prefHeight="100.0" prefWidth="606.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="613.0" spacing="15.0">
+               <children>
+                  <HBox prefHeight="65.0" prefWidth="451.0">
+                     <children>
+                        <VBox prefHeight="65.0" prefWidth="237.0" spacing="15.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Awal Tanggal" />
+                              <DatePicker fx:id="datePicker_awal" />
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="65.0" prefWidth="204.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Akhir Tanggal" />
+                                    <DatePicker fx:id="datePicker_akhir" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="65.0" prefWidth="124.0">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <JFXButton fx:id="btn_cetakLaporan" alignment="CENTER" onAction="#cetakLaporanPDF" ripplerFill="#34bf83" style="-fx-background-color: #39A67F;" text="Cetak Laporan" textFill="#fcf9f9" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="25.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

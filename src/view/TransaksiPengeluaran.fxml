@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuTransaksiPengeluaranController">
+   <children>
+      <StackPane layoutX="-1.0" layoutY="13.0" prefHeight="523.0" prefWidth="917.0">
+         <children>
+            <Pane fx:id="pane_transaksi" prefHeight="507.0" prefWidth="939.0">
+               <children>
+                  <AnchorPane id="AnchorPane" fx:id="anchorPane_pengeluaran" layoutX="21.0" layoutY="29.0" prefHeight="540.0" prefWidth="877.0" style="-fx-background-color: ffffff;">
+                     <children>
+                        <Label layoutX="78.0" layoutY="16.0" style="-fx-text-fill: #39A67F;" text="Transaksi Pengeluaran" textFill="#48a5ea">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" layoutX="579.0" layoutY="418.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Save" textFill="WHITE" />
+                        <Separator layoutX="78.0" layoutY="42.0" prefHeight="0.0" prefWidth="738.0" />
+                        <JFXButton buttonType="RAISED" layoutX="480.0" layoutY="419.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Delete" textFill="WHITE" />
+                        <Pane layoutX="57.0" layoutY="143.0" prefHeight="240.0" prefWidth="262.0">
+                           <children>
+                              <VBox layoutY="-3.0" prefHeight="240.0" prefWidth="262.0" spacing="25.0">
+                                 <children>
+                                    <JFXComboBox fx:id="cb_pilhPengeluaran" focusColor="#39a67f" labelFloat="true" prefHeight="27.0" prefWidth="262.0" promptText="Pilih Pengeluaran" />
+                                    <JFXTextField fx:id="tf_nominal_pengeluaran" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="216.0" promptText="Nominal" />
+                                 </children>
+                                 <padding>
+                                    <Insets top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="399.0" layoutY="51.0" prefHeight="82.0" prefWidth="420.0">
+                           <children>
+                              <Text layoutX="186.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rp. 100.000" />
+                              <Text fontSmoothingType="LCD" layoutX="12.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo RT" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="399.0" layoutY="124.0" prefHeight="251.0" prefWidth="420.0">
+                           <children>
+                              <TableView layoutX="-1.0" layoutY="14.0" prefHeight="240.0" prefWidth="423.0">
+                                 <columns>
+                                    <TableColumn prefWidth="82.71786499023438" text="ID " />
+                                    <TableColumn prefWidth="180.91619873046875" text="Jenis Pengeluaran" />
+                                    <TableColumn prefWidth="158.0" text="Besar Pengeluaran" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                        <JFXButton buttonType="RAISED" layoutX="677.0" layoutY="418.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Edit" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

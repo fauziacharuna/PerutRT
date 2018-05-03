@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuTransaksiPemasukanController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPane_Pemasukan" layoutX="12.0" layoutY="16.0" prefHeight="536.0" prefWidth="911.0" style="-fx-background-color: ffffff;">
+         <children>
+            <Label layoutX="37.0" layoutY="31.0" style="-fx-text-fill: #39A67F;" text="Transaksi Pemasukan" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="575.0" layoutY="480.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Save" textFill="WHITE" />
+            <Separator layoutX="37.0" layoutY="54.0" prefHeight="3.0" prefWidth="786.0" />
+            <JFXButton buttonType="RAISED" layoutX="480.0" layoutY="479.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Delete" textFill="WHITE" />
+            <Pane layoutX="34.0" layoutY="155.0" prefHeight="288.0" prefWidth="262.0">
+               <children>
+                  <VBox layoutY="-3.0" prefHeight="283.0" prefWidth="262.0" spacing="40.0">
+                     <children>
+                        <JFXComboBox focusColor="#39a67f" labelFloat="true" prefHeight="27.0" prefWidth="262.0" promptText="Pilih Iuran" />
+                        <JFXTextField fx:id="tf_nominalIuran" editable="false" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="216.0" promptText="Nominal" />
+                        <JFXTextField fx:id="tf_jumlahKurang" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="191.0" promptText="Jumlah Kurang" />
+                        <JFXTextField fx:id="tf_status" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="191.0" promptText="Status" />
+                     </children>
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane layoutX="420.0" layoutY="68.0" prefHeight="82.0" prefWidth="420.0">
+               <children>
+                  <Text layoutX="186.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rp. 100.000" />
+                  <JFXComboBox focusColor="#39a67f" labelFloat="true" layoutX="8.0" layoutY="5.0" prefHeight="27.0" prefWidth="269.0" promptText="Nama Anggota" />
+                  <Text fontSmoothingType="LCD" layoutX="12.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit" />
+               </children>
+            </Pane>
+            <Pane layoutX="421.0" layoutY="178.0" prefHeight="266.0" prefWidth="420.0">
+               <children>
+                  <TableView layoutX="-1.0" layoutY="14.0" prefHeight="240.0" prefWidth="423.0">
+                     <columns>
+                        <TableColumn prefWidth="82.71786499023438" text="ID " />
+                        <TableColumn prefWidth="180.91619873046875" text="Jenis Iuran" />
+                        <TableColumn prefWidth="158.0" text="Besar Iuran" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="677.0" layoutY="478.0" prefHeight="22.0" prefWidth="68.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Edit" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

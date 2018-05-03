@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="HolderPane" prefHeight="529.0" prefWidth="973.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CetakController">
+   <children>
+      <ToolBar layoutX="15.0" layoutY="19.0" prefHeight="40.0" prefWidth="956.0">
+        <items>
+          <Button fx:id="btnLaporan" mnemonicParsing="false" onAction="#LaporanView" style="-fx-background-color: #39A67F;" text="Laporan" textFill="#f2ecec" wrapText="true" />
+            <Button fx:id="btnUndangan" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#UndanganView" style="-fx-background-color: #39A67F;" text="Undangan" textFill="#f8f7f7" />
+        </items>
+      </ToolBar>
+      <StackPane fx:id="sp_cetak" layoutX="21.0" layoutY="60.0" prefHeight="440.0" prefWidth="657.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+         </children></StackPane>
+   </children>
+</AnchorPane>
