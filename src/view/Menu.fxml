@@ -143,6 +143,6 @@
             </VBox>
          </children>
       </Pane>
-      <StackPane fx:id="sp_pane_holder" layoutX="162.0" layoutY="90.0" prefHeight="594.0" prefWidth="969.0" />
+      <StackPane fx:id="sp_pane_holder" layoutX="195.0" layoutY="147.0" prefHeight="594.0" prefWidth="969.0" />
    </children>
 </AnchorPane>
