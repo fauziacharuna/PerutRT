@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package dao;
+package dao.mysql;
 
 /**
  *
  * @author Setyawati
  */
-public class desicoba {
+public class DAOMySqlPengeluaranPerubahan {
     
 }
