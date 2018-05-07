@@ -13,15 +13,15 @@ import java.util.List;
 public interface implementPengeluaranKategori {
     public void insert(pengeluaran_kategori b);
     
-    public pengeluaran_kategori get(int pengeluaran_Kategori_id);
+    public pengeluaran_kategori get(Integer pengeluaran_Kategori_id);
 
     public void update(pengeluaran_kategori b);
 
-    public void delete(int pengeluaran_Kategori_id);
+    public void delete(Integer pengeluaran_Kategori_id);
 
     public List<pengeluaran_kategori> getAll();
 
     public List<pengeluaran_kategori> getCari(String pengeluaran_Kategori_Nama);
     
-    public int getCount();
+    public Integer getCount();
 }

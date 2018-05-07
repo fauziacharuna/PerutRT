@@ -10,20 +10,20 @@ import object.pengeluaran_jenis;
 
 /**
  *
- * @author rheza
+ * @author Setyawati
  */
 public interface implementPengeluaranJenis {
     public void insert(pengeluaran_jenis b);
     
-    public pengeluaran_jenis get(int pengeluaran_Jenis_id);
+    public pengeluaran_jenis get(Integer pengeluaran_Jenis_id);
 
     public void update(pengeluaran_jenis b);
 
-    public void delete(int pengeluaran_Jenis_id);
+    public void delete(Integer pengeluaran_Jenis_id);
 
     public List<pengeluaran_jenis> getAll();
 
     public List<pengeluaran_jenis> getCari(String pengeluaran_Jenis_Nama);
     
-    public int getCount();
+    public Integer getCount();
 }

@@ -6,6 +6,8 @@
 package dao;
 import object.pengeluaran;
 import java.util.List;
+import object.pengeluaran_jenis;
+import object.pengeluaran_kategori;
 
 /**
  *
@@ -14,15 +16,19 @@ import java.util.List;
 public interface implementPengeluaran {
     public void insert(pengeluaran b);
     
-    public pengeluaran get(int pengeluaran_id);
+    public pengeluaran get(Integer pengeluaran_id);
+    
+    public pengeluaran_jenis getPengeluaranJenis(pengeluaran b);
+    
+    public pengeluaran_kategori getPengeluaranKategori(pengeluaran b);
 
     public void update(pengeluaran b);
 
-    public void delete(int pengeluaran_id);
+    public void delete(Integer pengeluaran_id);
 
     public List<pengeluaran> getAll();
 
     public List<pengeluaran> getCari(String pengeluaran_Nama);
     
-    public int getCount();
+    public Integer getCount();
 }

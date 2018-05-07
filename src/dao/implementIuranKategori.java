@@ -15,15 +15,15 @@ import object.iuran_kategori;
 public interface implementIuranKategori {
      public void insert(iuran_kategori b);
     
-    public iuran_kategori get(int iuran_Kategori_id);
+    public iuran_kategori get(Integer iuran_Kategori_id);
 
     public void update(iuran_kategori b);
 
-    public void delete(int iuran_Kategori_id);
+    public void delete(Integer iuran_Kategori_id);
 
     public List<iuran_kategori> getAll();
 
     public List<iuran_kategori> getCari(String iuran_Kategori_Nama);
     
-    public int getCount();
+    public Integer getCount();
 }

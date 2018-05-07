@@ -20,9 +20,9 @@ public class Koneksi {
 
     static Connection con;
     private final static String DB_HOST = "localhost";
-    private final static String DB_NAME = "skeuanganrt";
+    private final static String DB_NAME = "perut_rt";
     private final static String DB_USER = "root";
-    private final static String DB_PASS = "";
+    private final static String DB_PASS = "root";
  
     public static Connection connection() {
         if (con == null) {

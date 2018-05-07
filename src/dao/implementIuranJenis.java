@@ -15,15 +15,15 @@ import object.iuran_jenis;
 public interface implementIuranJenis {
     public void insert(iuran_jenis b);
     
-    public iuran_jenis get(int iuran_Jenis_id);
+    public iuran_jenis get(Integer iuran_Jenis_id);
 
     public void update(iuran_jenis b);
 
-    public void delete(int iuran_Jenis_id);
+    public void delete(Integer iuran_Jenis_id);
 
     public List<iuran_jenis> getAll();
 
     public List<iuran_jenis> getCari(String iuran_Jenis_Nama);
     
-    public int getCount();
+    public Integer getCount();
 }

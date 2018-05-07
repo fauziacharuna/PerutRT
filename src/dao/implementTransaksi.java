@@ -18,11 +18,11 @@ import object.user;
 public interface implementTransaksi {
     public void insert(transaksi b);
     
-    public transaksi get(int transaksi_id);
+    public transaksi get(Integer transaksi_id);
 
     public void update(transaksi b);
 
-    public void delete(int transaksi_id);
+    public void delete(Integer transaksi_id);
 
     public List<transaksi> getAll();
 
@@ -34,21 +34,21 @@ public interface implementTransaksi {
     
     public pengeluaran getPengeluaran(transaksi b);
     
-    public int getJumlahKas();
+    public Integer getJumlahKas();
     
-    public int getJumlahIuran();
+    public Integer getJumlahIuran();
     
-    public int getJumlahPengeluaran();
+    public Integer getJumlahPengeluaran();
     
-    public int getJumlahTransaksi();
+    public Integer getJumlahTransaksi();
     
-    public int getUtang(int user_id, int iuran_id);
+    public Integer getUtang(Integer user_id, Integer iuran_id);
     
-    public int getTotalBayar(int user_id, int iuran_id);
+    public Integer getTotalBayar(Integer user_id, Integer iuran_id);
     
-    public int getTotalDibayar(int user_id, int iuran_id);
+    public Integer getTotalDibayar(Integer user_id, Integer iuran_id);
     
-    public transaksi getTransaksiPertama(String user_id, String iuran_id);
+    public transaksi getTransaksiPertama(Integer user_id, Integer iuran_id);
     
-    public int getCount();
+    public Integer getCount();
 }

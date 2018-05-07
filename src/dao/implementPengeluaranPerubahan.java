@@ -13,15 +13,15 @@ import object.pengeluaran_perubahan;
 public interface implementPengeluaranPerubahan {
     public void insert(pengeluaran_perubahan b);
     
-    public pengeluaran_perubahan get(int pengeluaran_Perubahan_id);
+    public pengeluaran_perubahan get(Integer pengeluaran_Perubahan_id);
 
     public void update(pengeluaran_perubahan b);
 
-    public void delete(int pengeluaran_Perubahan_id);
+    public void delete(Integer pengeluaran_Perubahan_id);
 
     public List<pengeluaran_perubahan> getAll();
 
     public List<pengeluaran_perubahan> getCari(String pengeluaran_Perubahan_Nama);
     
-    public int getCount();
+    public Integer getCount();
 }

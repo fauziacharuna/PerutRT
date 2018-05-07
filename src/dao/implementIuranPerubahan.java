@@ -5,11 +5,24 @@
  */
 
 package dao;
-
+import java.util.List;
+import object.iuran_perubahan;
 /**
  *
  * @author Setyawati
  */
-public class implementIuranPerubahan {
+public interface implementIuranPerubahan {
+    public void insert(iuran_perubahan b);
     
+    public iuran_perubahan get(Integer iuran_Perubahan_id);
+
+    public void update(iuran_perubahan b);
+
+    public void delete(Integer iuran_Perubahan_id);
+
+    public List<iuran_perubahan> getAll();
+
+    public List<iuran_perubahan> getCari(String iuran_Perubahan_Nama);
+    
+    public Integer getCount();
 }

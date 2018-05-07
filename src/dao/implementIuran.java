@@ -16,13 +16,13 @@ import object.iuran_kategori;
  * @author Setyawati
  */
 public interface implementIuran {
-    public int insert(iuran b);
+    public Integer insert(iuran b);
     
-    public iuran get(int iuran_id);
+    public iuran get(Integer iuran_id);
 
     public void update(iuran b);
 
-    public void delete(int iuran_id);
+    public void delete(Integer iuran_id);
 
     public List<iuran> getAll();
 
@@ -32,7 +32,7 @@ public interface implementIuran {
     
     public iuran_kategori getIuranKategori(iuran b);
     
-    public int getCount();
+    public Integer getCount();
     
 }
 

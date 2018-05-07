@@ -16,19 +16,19 @@ import object.user;
 public interface implementDeposit {
     public void insert(deposit b);
     
-    public deposit get(int deposit_id);
+    public deposit get(Integer deposit_id);
     
     public deposit getByUser(user b);
 
     public void update(deposit b);
 
-    public void delete(int deposit_id);
+    public void delete(Integer deposit_id);
 
     public List<deposit> getAll();
     
-    public List<deposit> getCari(int user_id);
+    public List<deposit> getCari(Integer user_id);
     
     public user getUser(deposit b);
     
-    public int getCount();
+    public Integer getCount();
 }
