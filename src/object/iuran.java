@@ -9,34 +9,107 @@ package object;
  *
  * @author PC-14
  */
-import java.util.Date;
+
 public class iuran {
+
+
+    public iuran(int iuran_id, int iuran_Kategori_id, int iuran_Jenis_id, Double iuran_Nominal, String iuran_Tanggal, String iuran_Nama) {
+        this.iuran_id = iuran_id;
+        this.iuran_Nama = iuran_Nama;
+       
+        this.iuran_Jenis_id = iuran_Jenis_id;
+        this.iuran_Kategori_id = iuran_Kategori_id;
+        this.iuran_Tanggal = iuran_Tanggal;
+        this.iuran_Nominal = iuran_Nominal;
+     
+       
+    }
+
+    public iuran(int iuran_id, int iuran_Kategori_id, int iuran_Jenis_id, Double iuran_Nominal, Double iuran_Total, String iuran_Tanggal, String iuran_Nama) {
+        this.iuran_id = iuran_id;
+        this.iuran_Kategori_id = iuran_Kategori_id;
+        this.iuran_Jenis_id = iuran_Jenis_id;
+        this.iuran_Nominal = iuran_Nominal;
+        this.iuran_Total = iuran_Total;
+        this.iuran_Tanggal = iuran_Tanggal;
+        this.iuran_Nama = iuran_Nama;
+    }
     private int iuran_id, iuran_Kategori_id, iuran_Jenis_id;
     private Double iuran_Nominal, iuran_Total;
     private String iuran_Tanggal;
     private String iuran_Nama;
+    
+    public iuran() {
+        
+    }
 
-    public int getIuran_id() {
+//    public iuran(Integer iuran_id, Integer iuran_Kategori_id, Integer iuran_Jenis_id, Double iuran_Nominal, String iuran_Tanggal, String iuran_Nama) {
+//        this.iuran_id = iuran_id;
+//        this.iuran_Kategori_id = iuran_Kategori_id;
+//        this.iuran_Jenis_id = iuran_Jenis_id;
+//        this.iuran_Nominal = iuran_Nominal;
+//        this.iuran_Tanggal = iuran_Tanggal;
+//        this.iuran_Nama = iuran_Nama;
+//    }
+    public iuran(String iuran_Nama,int iuran_id, int iuran_Jenis_id, String iuran_Tanggal ){
+        this.iuran_id=iuran_id;
+        this.iuran_Jenis_id=iuran_Jenis_id;
+        this.iuran_Nama=iuran_Nama;
+        this.iuran_Tanggal=iuran_Tanggal;
+         this.iuran_Nama=iuran_Nama;
+        this.iuran_Nominal=iuran_Nominal;
+        
+    }
+
+   
+
+//    public iuran(int iuran_id, int iuran_Jenis_id, int iuran_Kategori_id, String iuran_Nama, String iuran_Tanggal, double iuran_Nominal, double iuran_Total) {
+//        this.iuran_id = iuran_id;
+//        this.iuran_Jenis_id = iuran_Jenis_id;
+//        this.iuran_Kategori_id = iuran_Kategori_id;
+//        this.iuran_Nama = iuran_Nama;
+//        this.iuran_Tanggal = iuran_Tanggal;
+//        this.iuran_Nominal = iuran_Nominal;
+//        this.iuran_Total = iuran_Total;
+//    }
+
+//    public iuran(int iuran_Jenis_id, int iuran_Kategori_id, String iuran_Nama, String iuran_Tanggal, double iuran_Nominal, double iuran_Total) {
+//        this.iuran_Jenis_id = iuran_Jenis_id;
+//        this.iuran_Kategori_id = iuran_Kategori_id;
+//        this.iuran_Nama = iuran_Nama;
+//        this.iuran_Tanggal = iuran_Tanggal;
+//        this.iuran_Nominal = iuran_Nominal;
+//        this.iuran_Total = iuran_Total;
+//    }
+
+    
+
+
+ 
+
+   
+    
+    public Integer getIuran_id() {
         return iuran_id;
     }
 
-    public void setIuran_id(int iuran_id) {
+    public void setIuran_id(Integer iuran_id) {
         this.iuran_id = iuran_id;
     }
 
-    public int getIuran_Kategori_id() {
+    public Integer getIuran_Kategori_id() {
         return iuran_Kategori_id;
     }
 
-    public void setIuran_Kategori_id(int iuran_Kategori_id) {
+    public void setIuran_Kategori_id(Integer iuran_Kategori_id) {
         this.iuran_Kategori_id = iuran_Kategori_id;
     }
 
-    public int getIuran_Jenis_id() {
+    public Integer getIuran_Jenis_id() {
         return iuran_Jenis_id;
     }
 
-    public void setIuran_Jenis_id(int iuran_Jenis_id) {
+    public void setIuran_Jenis_id(Integer iuran_Jenis_id) {
         this.iuran_Jenis_id = iuran_Jenis_id;
     }
 
@@ -71,5 +144,4 @@ public class iuran {
     public void setIuran_Nama(String iuran_Nama) {
         this.iuran_Nama = iuran_Nama;
     }
-    
 }

@@ -37,7 +37,7 @@ public class MainClass extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("LoginSistemKeuangan.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/LoginSistemKeuangan.fxml"));
         primaryStage.setScene(new Scene(root));
         //agar stage button hilang
         primaryStage.initStyle(StageStyle.UNDECORATED); 

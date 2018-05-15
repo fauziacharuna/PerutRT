@@ -21,4 +21,5 @@ public interface implementUser {
     public Integer getCount();
     
     public Integer getValidLogin(String username, String password);
+
 }

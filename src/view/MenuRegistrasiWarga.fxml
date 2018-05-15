@@ -33,11 +33,11 @@
          <children>
             <VBox prefHeight="327.0" prefWidth="226.0" spacing="25.0">
                <children>
-                  <JFXTextField fx:id="tf_birthDate" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Date Of Birth" />
                   <JFXTextField fx:id="tf_username" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="User Name" />
-                  <JFXTextField fx:id="tf_address" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Address" />
-                  <JFXTextField fx:id="tf_identity" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Identity Number" />
-                  <JFXTextField fx:id="tf_name" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Name" />
+                  <DatePicker fx:id="dp_tglLahir" prefHeight="27.0" prefWidth="216.0" promptText="tanggal lahir" />
+                  <JFXTextField fx:id="tf_name" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Nama" />
+                  <JFXTextField fx:id="tf_address" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="Alamat" />
+                  <JFXTextField fx:id="tf_identity" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="KTP" />
                   <JFXComboBox fx:id="cb_usertType" focusColor="#39a67f" labelFloat="true" prefHeight="25.0" prefWidth="217.0" promptText="User Type" />
                   <JFXTextField fx:id="tf_saldo" promptText="Saldo" />
                </children>
@@ -56,14 +56,12 @@
       </Label>
       <JFXButton fx:id="btn_edit" layoutX="227.0" layoutY="449.0" onAction="#editUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Edit" textFill="WHITE" />
       <JFXButton fx:id="btn_delete" layoutX="91.0" layoutY="449.0" onAction="#hapusUser" prefHeight="27.0" prefWidth="84.0" ripplerFill="#38a67e" style="-fx-background-color: #39A67F;" text="Delete" textFill="WHITE" />
-      <ScrollPane layoutX="350.0" layoutY="109.0" prefHeight="200.0" prefWidth="185.0">
+      <ScrollPane layoutX="350.0" layoutY="109.0" prefHeight="200.0" prefWidth="209.0">
          <content>
-            <VBox prefHeight="200.0" prefWidth="186.0" spacing="10.0">
+            <VBox prefHeight="200.0" prefWidth="180.0" spacing="10.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Iuran" VBox.vgrow="ALWAYS" />
-                  <CheckBox mnemonicParsing="false" text="Iuran Wajib" />
-                  <CheckBox mnemonicParsing="false" text="Iuran Insidental" />
-                  <CheckBox mnemonicParsing="false" text="Iuran Sampah" />
+                  <CheckListView fx:id="clv_iuran" editable="true" prefHeight="32.0" prefWidth="157.0" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" top="10.0" />

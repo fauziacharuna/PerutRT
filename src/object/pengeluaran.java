@@ -9,34 +9,54 @@ package object;
  *
  * @author PC-14
  */
-import java.util.Date;
+
 public class pengeluaran {
-    private int pengeluaran_id, pengeluaran_Kategori, pengeluaran_Jenis_id;
+    private Integer pengeluaran_id, pengeluaran_Kategori_id, pengeluaran_Jenis_id;
     private Double pengeluaran_Nominal;
     private String pengeluaran_Nama;
     private String pengeluaran_Tanggal;
 
-    public int getPengeluaran_id() {
+    public pengeluaran() {
+    }
+
+    public pengeluaran(int pengeluaran_Jenis_id, int pengeluaran_Kategori_id, String pengeluaran_Nama, String pengeluaran_Tanggal, double pengeluaran_Nominal) {
+        this.pengeluaran_Jenis_id = pengeluaran_Jenis_id;
+        this.pengeluaran_Kategori_id = pengeluaran_Kategori_id;
+        this.pengeluaran_Nama = pengeluaran_Nama;
+        this.pengeluaran_Tanggal = pengeluaran_Tanggal;
+        this.pengeluaran_Nominal = pengeluaran_Nominal;
+    }
+
+    public pengeluaran(int pengeluaran_id, int pengeluaran_jenis_id, int pengeluaran_kategori_id, String pengeluaran_nama, String pengeluaran_keterangan, double pengeluaran_Nominal) {
+        this.pengeluaran_id = pengeluaran_id;
+        this.pengeluaran_Jenis_id = pengeluaran_Jenis_id;
+        this.pengeluaran_Kategori_id = pengeluaran_Kategori_id;
+        this.pengeluaran_Nama = pengeluaran_Nama;
+        this.pengeluaran_Tanggal = pengeluaran_Tanggal;
+        this.pengeluaran_Nominal = pengeluaran_Nominal;
+    }
+    
+    public Integer getPengeluaran_id() {
         return pengeluaran_id;
     }
 
-    public void setPengeluaran_id(int pengeluaran_id) {
+    public void setPengeluaran_id(Integer pengeluaran_id) {
         this.pengeluaran_id = pengeluaran_id;
     }
 
-    public int getPengeluaran_Kategori() {
-        return pengeluaran_Kategori;
+    public Integer getPengeluaran_Kategori_id() {
+        return pengeluaran_Kategori_id;
     }
 
-    public void setPengeluaran_Kategori(int pengeluaran_Kategori) {
-        this.pengeluaran_Kategori = pengeluaran_Kategori;
+    public void setPengeluaran_Kategori_id(Integer pengeluaran_Kategori_id) {
+        this.pengeluaran_Kategori_id = pengeluaran_Kategori_id;
     }
 
-    public int getPengeluaran_Jenis_id() {
+    public Integer getPengeluaran_Jenis_id() {
         return pengeluaran_Jenis_id;
     }
 
-    public void setPengeluaran_Jenis_id(int pengeluaran_Jenis_id) {
+    public void setPengeluaran_Jenis_id(Integer pengeluaran_Jenis_id) {
         this.pengeluaran_Jenis_id = pengeluaran_Jenis_id;
     }
 
@@ -64,7 +84,4 @@ public class pengeluaran {
         this.pengeluaran_Tanggal = pengeluaran_Tanggal;
     }
 
-    public void setPengeluaran_Kategori_id(int aInt) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}

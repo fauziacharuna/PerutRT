@@ -10,30 +10,46 @@ package object;
  * @author PC-14
  */
 public class deposit {
-    private int deposit_id, user_id;
-    private Double deposit_jumlah;
+    private Integer deposit_id, user_id;
+    private Double deposit_Nominal;
 
-    public int getDeposit_id() {
+    public deposit() {
+    }
+    
+    public deposit(int deposit_d, int user_id, double deposit_Nominal) {
+        this.deposit_id = deposit_id;
+        this.user_id = user_id;
+        this.deposit_Nominal = deposit_Nominal;
+    }
+
+    public deposit(int user_id, double deposit_Nominal) {
+        this.user_id = user_id;
+        this.deposit_Nominal = deposit_Nominal;
+    }
+    
+    public Integer getDeposit_id() {
         return deposit_id;
     }
 
-    public void setDeposit_id(int deposit_id) {
+    public void setDeposit_id(Integer deposit_id) {
         this.deposit_id = deposit_id;
     }
 
-    public int getUser_id() {
+    public Integer getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
 
-    public Double getDeposit_jumlah() {
-        return deposit_jumlah;
+    public Double getDeposit_Nominal() {
+        return deposit_Nominal;
     }
 
-    public void setDeposit_jumlah(Double deposit_jumlah) {
-        this.deposit_jumlah = deposit_jumlah;
+    public void setDeposit_Nominal(Double deposit_Nominal) {
+        this.deposit_Nominal = deposit_Nominal;
     }
 }
+
+    

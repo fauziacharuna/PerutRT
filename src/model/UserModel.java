@@ -62,9 +62,11 @@ public class UserModel implements implementUser{
     }
 
     @Override
-    public Integer getValidLogin(String username, String password) {
+    public Integer  getValidLogin(String username, String password) {
         return dAOUser.getValidLogin(username, password);
-    }
-    
-}
+    }   
 
+  
+
+ 
+}

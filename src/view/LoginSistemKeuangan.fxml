@@ -17,12 +17,12 @@
 
 <AnchorPane id="bg1" fx:id="bg1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ecf0f1;" stylesheets="@loginsiput.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPerutController">
    <children>
-      <JFXTextField id="usernametext" fx:id="usernametext" focusColor="BLACK" layoutX="340.0" layoutY="108.0" promptText="nama akun" unFocusColor="#2980b9">
+      <JFXTextField id="usernametext" fx:id="usernametext" focusColor="#39a67f" layoutX="340.0" layoutY="108.0" promptText="nama akun" unFocusColor="#8b8d8c">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField id="passtext" fx:id="passtext" focusColor="BLACK" layoutX="340.0" layoutY="167.0" onAction="#Login" promptText="kata sandi" unFocusColor="#2980b9">
+      <JFXPasswordField id="passtext" fx:id="passtext" focusColor="#39a67f" layoutX="340.0" layoutY="167.0" onAction="#Login" promptText="kata sandi" unFocusColor="#8b8d8c">
          <font>
             <Font size="16.0" />
          </font>
@@ -38,13 +38,13 @@
       <Label fx:id="statustext" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="340.0" layoutY="316.0" prefHeight="17.0" prefWidth="180.0" textFill="#1e1b1b" />
       <AnchorPane layoutY="-5.0" prefHeight="409.0" prefWidth="292.0" style="-fx-background-color: #39A67F;">
          <children>
-            <Label layoutX="47.0" layoutY="251.0" lineSpacing="100.0" prefHeight="47.0" prefWidth="180.0" text="FINANCEIN" textFill="WHITE">
+            <Label layoutX="47.0" layoutY="251.0" lineSpacing="100.0" prefHeight="47.0" prefWidth="180.0" text="PERUT RT" textFill="WHITE">
                <font>
-                  <Font name="AlexanderGrotesk-Bold" size="34.0" />
+                  <Font name="SF Pro Text Regular" size="34.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="298.0" prefHeight="17.0" prefWidth="190.0" text="Sistem Pengelelolaan Keuangan RT" textAlignment="CENTER" textFill="#f8f8f8" />
-            <Label fx:id="versi" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="387.0" prefHeight="17.0" prefWidth="43.0" text="Beta 1.0" textAlignment="CENTER" textFill="#f8f8f8" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="298.0" prefHeight="17.0" prefWidth="190.0" text="Pengaturan Keuangan RT" textAlignment="CENTER" textFill="#f8f8f8" />
+            <Label fx:id="versi" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="387.0" prefHeight="17.0" prefWidth="43.0" textAlignment="CENTER" textFill="#f8f8f8" />
          </children>
       </AnchorPane>
    </children>

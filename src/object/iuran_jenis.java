@@ -10,23 +10,30 @@ package object;
  * @author PC-14
  */
 public class iuran_jenis {
-    private int iuran_Jenis, iuran_id;
+    private Integer iuran_Jenis_id, iuran_Jenis_Interval;
     private String iuran_Jenis_Nama;
-
-    public int getIuran_Jenis() {
-        return iuran_Jenis;
+    
+    public iuran_jenis() {
     }
 
-    public void setIuran_Jenis(int iuran_Jenis) {
-        this.iuran_Jenis = iuran_Jenis;
+    public iuran_jenis(Integer valueOf, String valueOf0, Integer valueOf1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int getIuran_id() {
-        return iuran_id;
+    public Integer getIuran_Jenis_id() {
+        return iuran_Jenis_id;
     }
 
-    public void setIuran_id(int iuran_id) {
-        this.iuran_id = iuran_id;
+    public void setIuran_Jenis_id(Integer iuran_Jenis_id) {
+        this.iuran_Jenis_id = iuran_Jenis_id;
+    }
+
+    public Integer getIuran_Jenis_Interval() {
+        return iuran_Jenis_Interval;
+    }
+
+    public void setIuran_Jenis_Interval(Integer iuran_Jenis_Interval) {
+        this.iuran_Jenis_Interval = iuran_Jenis_Interval;
     }
 
     public String getIuran_Jenis_Nama() {
@@ -36,4 +43,5 @@ public class iuran_jenis {
     public void setIuran_Jenis_Nama(String iuran_Jenis_Nama) {
         this.iuran_Jenis_Nama = iuran_Jenis_Nama;
     }
-}
+
+    }

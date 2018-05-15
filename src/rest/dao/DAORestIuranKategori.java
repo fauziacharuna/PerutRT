@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package rest.dao;
 
-import static rest.dao.DAORestIuranKategori.alamat;
-import dao.implementPengeluaranKategori;
+import static rest.dao.DAORestIuranJenis.alamat;
+import dao.implementIuranKategori;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -19,7 +20,8 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-import object.pengeluaran_kategori;
+import object.iuran_kategori;
+import object.user;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -33,26 +35,24 @@ import org.jsoup.select.Elements;
  *
  * @author Setyawati
  */
-public class DAORestPengeluaranKategori implements implementPengeluaranKategori {
+public class DAORestIuranKategori implements implementIuranKategori{
+ private List<iuran_kategori> listKategoriIuran;
+    public static String alamat = "http://localhost/siput-server/index.php/Iuran_kategoris";
 
-    private List<pengeluaran_kategori> listPengeluaranKategori;
-    public static String alamat = "http://localhost/siput-server/index.php/pengeluaran_kategoris";
-
-    public DAORestPengeluaranKategori() {
-        populatePengeluaranKategori();
+    public DAORestIuranKategori() {
+        populateIuranKategori();
     }
 
-    @Override
-    public void insert(pengeluaran_kategori b) {
-        int id = 0;
+    @Override 
+    public void insert(iuran_kategori b) {
         try {
             URL url = new URL(alamat);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("POST");
 
-            String urlParameters = "pengeluaran_Kategori_Nama=" + b.getPengeluaran_Kategori_Nama();
-
+            String urlParameters = "iuran_Kategori_Nama=" + b.getIuran_Kategori_Nama();
+//                    + "&iuran_Kategori_Interval=" + b.getIuran_Kategori_Interval();
             byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8);
             int postDataLength = postData.length;
             conn.setDoOutput(true);
@@ -85,11 +85,11 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
             Elements tables = d.select("table > tbody > tr > td");
             Element e = tables.first();
             System.out.println(e.text());
-            id = Integer.valueOf(e.text());
+            int id = Integer.valueOf(e.text());
             System.out.println("id created:" + id);
 
             conn.disconnect();
-            populatePengeluaranKategori();
+            populateIuranKategori();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -97,8 +97,8 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
         }
     }
 
-    public void populatePengeluaranKategori() {
-        listPengeluaranKategori = new ArrayList<>();
+    public void populateIuranKategori() {
+        listKategoriIuran = new ArrayList<>();
         try {
             URL url = new URL(alamat);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -120,15 +120,16 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
             }
             JSONParser jp = new JSONParser();
             JSONArray json = (JSONArray) jp.parse(sb.toString());
-            listPengeluaranKategori.clear();
+            listKategoriIuran.clear();
             for (int i = 0; i < json.size(); i++) {
-
+                
                 JSONObject jo = (JSONObject) jp.parse(json.get(i).toString());
-                listPengeluaranKategori.add(new pengeluaran_kategori(Integer.valueOf(jo.get("pengeluaran_Kategori_id").toString()),
-                        String.valueOf(jo.get("pengeluaran_Kategori_Nama").toString()), 
-                        Integer.valueOf(jo.get("pengeluaran_id").toString())));
+                //System.out.println(jo.get("iuran_nama").toString());
+                listKategoriIuran.add(new iuran_kategori(Integer.valueOf(jo.get("iuran_Kategori_id").toString()), 
+                        String.valueOf(jo.get("iuran_Kategori_Nama").toString()),
+                        Integer.valueOf(jo.get("iuran_id").toString())));
             }
-                conn.disconnect();
+            conn.disconnect();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -138,30 +139,32 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
         }
     }
 
-    public pengeluaran_kategori get(Integer pengeluaran_Kategori_id) {
-        populatePengeluaranKategori();
-        pengeluaran_kategori pengeluarankategori = null;
-        for (pengeluaran_kategori _pengeluarankategori : listPengeluaranKategori) {
-            if (Integer.valueOf(_pengeluarankategori.getPengeluaran_Kategori_id()).equals(pengeluaran_Kategori_id)) {
-                pengeluarankategori = _pengeluarankategori;
+        public iuran_kategori getIuranKategoriId(Integer iuran_Kategori_id) {
+        populateIuranKategori();
+        iuran_kategori iuranKategori = null;
+        for (iuran_kategori _iurankategori : listKategoriIuran) {
+            if (Integer.valueOf(_iurankategori.getIuran_Kategori_id()).equals(iuran_Kategori_id)) {
+               iuranKategori = _iurankategori;
             }
         }
-        return pengeluarankategori;
+        return iuranKategori;
     }
 
     @Override
-    public void update(pengeluaran_kategori b) {
+    public void update(iuran_kategori b) {
         try {
-            URL url = new URL(alamat + "?id=" + b.getPengeluaran_Kategori_id());
+            URL url = new URL(alamat+"?id="+b.getIuran_Kategori_id());
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("PUT");
             conn.setRequestProperty("Content-Type", "application/json");
             conn.setRequestProperty("Accept", "application/json");
             //conn.addRequestProperty("Authorization", LoginDAOREST.user);
-            String input = "{"
-                    + "\"pengeluaran_kategori_nama\":\"" + b.getPengeluaran_Kategori_Nama()
+            String input =  "{"
+                    + "\"iuran_Kategori_Nama\":\"" + b.getIuran_Kategori_Nama()
+//                    + "\",\"iuran_Kategori_Interval\":\"" + b.getIuran_Kategori_Interval()
                     + "\"}";
+          
             OutputStream os = conn.getOutputStream();
             os.write(input.getBytes());
             os.flush();
@@ -175,7 +178,7 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
                 System.out.println(output);
             }
             conn.disconnect();
-            populatePengeluaranKategori();
+            populateIuranKategori();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -184,15 +187,15 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
     }
 
     @Override
-    public void delete(Integer pengeluaran_kategori_id) {
+    public void delete(Integer iuran_Kategori_id) {
         try {
-            URL url = new URL(alamat + "?id=" + pengeluaran_kategori_id);
+            URL url = new URL(alamat+"?id="+iuran_Kategori_id);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
             conn.setRequestMethod("DELETE");
             conn.setRequestProperty("Content-Type", "application/json");
             //conn.addRequestProperty("Authorization", LoginDAOREST.user);
-            System.out.println("alamat url : " + alamat + "?id=" + pengeluaran_kategori_id);
+            System.out.println("alamat url : "+alamat+"?id="+iuran_Kategori_id);
             if (conn.getResponseCode() != HttpURLConnection.HTTP_OK) {
                 throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
             }
@@ -203,7 +206,7 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
                 System.out.println(output);
             }
             conn.disconnect();
-            populatePengeluaranKategori();
+            populateIuranKategori();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -212,22 +215,32 @@ public class DAORestPengeluaranKategori implements implementPengeluaranKategori 
     }
 
     @Override
-    public List<pengeluaran_kategori> getAll() {
-        populatePengeluaranKategori();
-        return listPengeluaranKategori;
+    public iuran_kategori get(Integer iuran_Kategori_id) {
+        populateIuranKategori();
+        iuran_kategori iuranKategori = null;
+        for (iuran_kategori _iuranKategori : listKategoriIuran) {
+            if (Integer.valueOf(_iuranKategori.getIuran_Kategori_id()).equals(iuran_Kategori_id)) {
+                iuranKategori = _iuranKategori;
+            }
+        }
+        return iuranKategori;
     }
 
     @Override
-    public List<pengeluaran_kategori> getCari(String pengeluaran_Kategori_Nama) {
+    public List<iuran_kategori> getAll() {
+        populateIuranKategori();
+        return listKategoriIuran;
+    }
+
+    @Override
+    public List<iuran_kategori> getCari(String iuran_Kategori_Nama) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public Integer getCount() {
-        populatePengeluaranKategori();
-        return listPengeluaranKategori.size();
+        populateIuranKategori();
+        return listKategoriIuran.size();
     }
-
-
 
 }

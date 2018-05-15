@@ -34,6 +34,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import object.user;
 
 
 /**
@@ -79,7 +80,8 @@ public class MenuController implements Initializable {
     private JFXButton btn_website;
     @FXML
     private AnchorPane HolderPane;
-     
+    
+    user loggedinUser;
 
     /**
      * Initializes the controller class.
@@ -190,6 +192,12 @@ public class MenuController implements Initializable {
     @FXML
     private void open_website(ActionEvent event) {
     }
-
+//      public void setUserName(user loggedIn_user) {
+//        this.loggedinUser = loggedIn_user;
+//        this.lblFullName.setText(this.logedinUser.getUser_displayname());
+//        this.lblUsrName.setText(this.logedinUser.getUser_username());
+//        this.lblUsrNamePopOver.setText(this.logedinUser.getUser_username());
+//        this.lblRoleAs.setText(this.logedinUser.getUser_tipe());
+//    }
 
 }
